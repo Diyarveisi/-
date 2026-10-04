@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070b14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ایرانخودرو">
+
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAWfmNhQlgAABZ+anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFlhqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjM3ODg3ZThiLTZjMjAtNDBhMy05YzdhLTYzOTk2MGU3NDA4NAAAAAOTanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuGp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNodiLUYWBXEOsbenwD408uSwAAAGxjYm9yo2lkYzpmb3JtYXRpaW1hZ2UvcG5namluc3RhbmNlSUR4LHhtcDppaWQ6NGJlNTViNzUtYjY0Yi00MWU5LWIwMzAtMmVhYzA2MzZhN2IwbHJlbGF0aW9uc2hpcGhwYXJlbnRPZgAAAeJqdW1iAAAAQWp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuYWN0aW9ucy52MgAAAAAYYzJzaHd8QQmDZoqJF/oNBx0lupUAAAGZY2JvcqJnYWN0aW9uc4KiZmFjdGlvbmtjMnBhLm9wZW5lZGpwYXJhbWV0ZXJzoWtpbmdyZWRpZW50c4GiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIAmSLOewQFQRhS/mnuDELA6Yd+K3fo2shx03g2Ph4Q7DpGZhY3Rpb254HWNvbS5hbnRocm9waWMuY2xhdWRlLnByb3ZpZGVkanBhcmFtZXRlcnOheB9jb20uYW50aHJvcGljLm9yaWdpbi1jb25maWRlbmNlZ3Vua25vd25rZGVzY3JpcHRpb254ZkNsYXVkZSBwcm92aWRlZCB0aGlzIGZpbGUgYXQgdGhlIHJlcXVlc3Qgb2YgYSB1c2VyIGFuZCBtYXkgaGF2ZSBjcmVhdGVkIG9yIG1vZGlmaWVkIHRoZSBmaWxlIGNvbnRlbnRzLm1zb2Z0d2FyZUFnZW50oWRuYW1lZkNsYXVkZXJhbGxBY3Rpb25zSW5jbHVkZWT1AAAAyGp1bWIAAABAanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5oYXNoLmRhdGEAAAAAGGMyc2jfVEvvHHEiiNAPbpLm1j5dAAAAgGNib3KlY2FsZ2ZzaGEyNTZjcGFkTQAAAAAAAAAAAAAAAABkaGFzaFggIBYKhLqq0H791zegS91BvYxYWgQt0LjLrpXV3xdWl5dkbmFtZW5qdW1iZiBtYW5pZmVzdGpleGNsdXNpb25zgaJlc3RhcnQYIWZsZW5ndGgZFooAAAI+anVtYgAAACdqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltLnYyAAAAAg9jYm9ypWNhbGdmc2hhMjU2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46YzJwYTozNzg4N2U4Yi02YzIwLTQwYTMtOWM3YS02Mzk5NjBlNzQwODQvYzJwYS5zaWduYXR1cmVqaW5zdGFuY2VJRHgseG1wOmlpZDplZTYwNjJmNy0zZDJkLTRiM2EtOTg0ZS0zOWZlY2E0YjU2NDNyY3JlYXRlZF9hc3NlcnRpb25zg6JjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggCZIs57BAVBGFL+ae4MQsDph34rd+jayHHTeDY+HhDsOiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5hY3Rpb25zLnYyZGhhc2hYIPiWSypnldlz9WXgldXLyGX0jqvUoy+ct1XBErai/u/SomN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYIGS8325ssz7NYf+wEyFqiGGiCKk2HFDxY01yAE2TufFedGNsYWltX2dlbmVyYXRvcl9pbmZvo2RuYW1lb0FudGhyb3BpYyBGaWxlc2d2ZXJzaW9uZTEuMC4wa3NwZWNWZXJzaW9uZTIuNC4wAAAQOGp1bWIAAAAoanVtZGMyY3MAEQAQgAAAqgA4m3EDYzJwYS5zaWduYXR1cmUAAAAQCGNib3LShFkCEqIBJhghWQIKMIICBjCCAY2gAwIBAgIUQOWgCu7COdC+uIP6BkIFPWdVEwAwCgYIKoZIzj0EAwMwSTEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxLjAsBgNVBAMTJUFudGhyb3BpYyBDb250ZW50IENyZWRlbnRpYWxzIFJvb3QgQ0EwHhcNMjYwODA3MTg0MzU2WhcNMjgwODA2MTk0MzU2WjBEMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEpMCcGA1UEAxMgQW50aHJvcGljIENsYXVkZSBDb250ZW50IFNpZ25pbmcwWTATBgcqhkjOPQIBBggqhkjOPQMBBwNCAASYegpry1AYBRTVNL1CpTlbROnY3dey+UrsF9C3phYrATN3ZHf93Mo8RQN0KOUuOn19P4oWNFWe5n2/She9N7eTo1gwVjAOBgNVHQ8BAf8EBAMCB4AwFQYDVR0lBA4wDAYKKwYBBAGD6F4CATAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFM5R4gSBTmRbI/jjxM+aPpzB11zCMAoGCCqGSM49BAMDA2cAMGQCMDFzHRSeAXrSy1WOzkbhPZ6Km2wGTmZ/2gK18k8BQGXyqz88Rdrz6CTX9flAnYNVxgIwcF9c3fVhqmJKpi+UhasNUMko69cyX6STPfta3Q8EjyzDjzoyrol46FP6VFHhvUcJoWNwYWRZDZ4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2WEA/9Xkq7h5BH99tL3nAxKGj6unKe08RoenDNR//A2WwAhaLwSjHe1u3wlCvkYWqaA7ffpUDqDyGQROqnQBXXZ7THV9EugAABFlJREFUeJzt3M1O21AQQGFTVWLBthI7nobH5mnY8RZdjERdB4KT45+ZuedbtVJ/4rnH1zZK8vD49GeS7vXr7Beg2gxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAF96+Xj7ctfa+7Bz8Zfmufy/vy6+O0Zrygvd6Cl65uNW9GCO9A/N8XhVhQMaJrAvmJGowfEL0mDNzR0QBve0Ayb0aAB7XQvPGBGwwV0azqLx/iVf+WmP1/aQAHBDnxG+9IoAW21/Ga00D+gzZfcK9pc54B2XWm3otA2oGMW2IwaBnT8oo6cUauATlzIYRtqElCSG9sBM+oQULZly/Z6dlU7oLRLlWRHPEDVgEqsUNq+N1QvoBLpzPXOqFhARRejXPTrlQmoaDpzDQ7hUoGAmp2+zTLKHlCzcX9qc1x5A2oz4u/0OMCMAfWY7ErVDzZXQM1ud9arm1GigOoOcRNFT54UAQ2ezly5UZwcUNHTbm+FMjotINO5rsp8zgmo0Bl2rvyDOjSgKmdVNpnndlxAmadQQs7dKOMXTL0/v1rPpZwz+X32C/hPzhnlEfNJ9S1pWQIynfVSZZTiEmY9d0gytBQBqS4DEmJAQgxIiAEJyfIYn8qVJ+Qkzz55uAMJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIT0fFP9fp8bJ/9yyzfkuwMJMSAhBiTEgIQYkBADEmJAQgxISM8fJMIf2fntHOu5AwkxICEGJMSAhBiQEAMSYkBCDEiIAQkxICEGJMSAhBiQEAMSYkBCDEiIAQkxICEGJKTne6Ih3/i8njuQEAMSYkBCDEiIAQlJEdB+30jXWJKhZXmMj3H4/LxGknRCloCCGV2XKp2Q4hK28PLxlnBSp8s5k4fHpz+H/We3jsCtKGSe26EBfbppIiNnlH9Q5wQ05T6rMqgyn9MCClXGdLD8G8+nkwMKhea1t3KjSBFQKDe7bRXdjBMFNJUdIlf35MkVUKg7zTtUP9iMAYXqk/1RjwPMG1DoMeVLbY4re0BTuxujNumEAgGFBnNvcAiXygQUiq5Bs010rlhAU8HFKBr9SvUCCiUy6p1OqBpQSLtCJfreRO2AQraMsr2eXXUIaEpzxg+VTmgSUDhx/QZMJ7QKKBy/lsPWM7UMKByzqCOnE9oGNO18Y2Q6oXNAYfOVTnLDnkT/gMJWGbnxLIwS0IR3DtP50kABhTsy8pp1xXABhZ0+JjxUOmHQgMKGGQ2YThg6oGmLhoZNJ4weULg7o8HrmQxozuesOxjQ0o8Zmc5cxi+YOtf1PqxnwR3oW4utyHS+ZEBCvIQJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhBiTEgIQYkBADEmJAQgxIiAEJMSAhfwFxqKs3JL5INgAAAABJRU5ErkJggg==">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<title>داروخانه ایرانخودرو</title>
+<style>
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+:root{--bg:#070b14;--ink:#e9f0ff;--dim:#8d9ab8;--line:rgba(255,255,255,.09);--glass:rgba(255,255,255,.055);--cy:#25f4d0;--am:#ffb020;--rose:#ff4f81;--vi:#8b7bff}
+*{box-sizing:border-box;margin:0}
+html{color-scheme:dark}
+body{font-family:Vazirmatn,Tahoma,system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;min-height:100dvh;
+ background-image:radial-gradient(60rem 40rem at 90% -10%,rgba(37,244,208,.14),transparent 60%),radial-gradient(50rem 40rem at -10% 110%,rgba(139,123,255,.16),transparent 60%);background-attachment:fixed}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+input,select{font:inherit;color:inherit}
+small{display:block;color:var(--dim);font-size:12px;line-height:1.5}
+h2{font-size:17px;font-weight:700}
+h3{font-size:18px;margin-bottom:12px}
+:focus-visible{outline:2px solid var(--cy);outline-offset:2px}
+.app{display:grid;grid-template-columns:210px 1fr;min-height:100dvh}
+nav.side{position:sticky;top:0;height:100dvh;padding:16px 12px;border-inline-end:1px solid var(--line);background:rgba(8,12,22,.6);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);display:flex;flex-direction:column;gap:6px;z-index:20}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 6px 14px;font-weight:800;line-height:1.3}
+.brand svg{width:38px;height:38px;flex:none;filter:drop-shadow(0 0 8px rgba(37,244,208,.6))}
+.nb{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;color:var(--dim);position:relative;transition:.18s}
+.nb:hover{background:var(--glass);color:var(--ink)}
+.nb.on{background:linear-gradient(90deg,rgba(37,244,208,.16),rgba(37,244,208,.04));color:var(--cy);box-shadow:inset 0 0 0 1px rgba(37,244,208,.35),0 0 18px rgba(37,244,208,.15)}
+.nb i{font-style:normal;font-size:19px}
+.nb b{position:absolute;inset-inline-end:10px;background:var(--rose);color:#fff;border-radius:99px;font-size:11px;min-width:20px;text-align:center;padding:0 5px;box-shadow:0 0 12px var(--rose)}
+.nb b:empty{display:none}
+.kb{margin-top:auto;font-size:11px;color:var(--dim);line-height:1.9;padding:10px;border:1px dashed var(--line);border-radius:12px}
+kbd{background:var(--glass);border:1px solid var(--line);border-radius:6px;padding:0 5px;font:inherit;font-size:11px}
+main{min-width:0;padding:0 20px 40px}
+header.top{position:sticky;top:0;z-index:15;display:flex;gap:10px;align-items:center;padding:14px 0 12px;background:linear-gradient(var(--bg) 70%,transparent)}
+.sw{position:relative;flex:1;min-width:0}
+#q{width:100%;padding:12px 16px;border-radius:16px;background:var(--glass);border:1px solid var(--line);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:16px}
+#q:focus{outline:0;border-color:var(--cy);box-shadow:0 0 0 3px rgba(37,244,208,.18),0 0 24px rgba(37,244,208,.18)}
+.sr{position:absolute;top:calc(100% + 8px);inset-inline:0;background:rgba(14,19,33,.96);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--line);border-radius:18px;max-height:65vh;overflow:auto;box-shadow:0 20px 60px rgba(0,0,0,.6);z-index:30;padding:6px}
+.sri{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:12px;cursor:pointer;align-items:center}
+.sri:hover,.sri.on{background:rgba(37,244,208,.1)}
+.sri .r{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex:none}
+.alt{color:var(--am)}
+.alt span{text-decoration:underline;cursor:pointer}
+.ib{width:44px;height:44px;border-radius:14px;background:var(--glass);border:1px solid var(--line);font-size:18px;flex:none}
+.ib:hover{border-color:var(--cy)}
+#net{font-size:11px;color:var(--dim);white-space:nowrap}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:22px;padding:18px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 10px 40px rgba(0,0,0,.25)}
+.ph{margin-bottom:14px}
+.row{display:flex;align-items:center}.between{justify-content:space-between}.g{gap:8px}.wrap{flex-wrap:wrap}.end{justify-content:flex-end;margin-top:16px}
+.btn{padding:10px 18px;border-radius:14px;font-weight:700;color:#04121a;background:linear-gradient(135deg,var(--cy),#5af0ff);box-shadow:0 0 22px rgba(37,244,208,.35);transition:.15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 0 30px rgba(37,244,208,.55)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:var(--glass);color:var(--ink);box-shadow:none;border:1px solid var(--line)}
+.btn.danger{color:var(--rose);border-color:rgba(255,79,129,.4)}
+.btn.big{width:100%;padding:16px;font-size:17px}
+.mini{width:34px;height:34px;border-radius:10px;background:var(--glass);border:1px solid var(--line)}
+.mini:hover{border-color:var(--cy)}
+.in{width:100%;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.in:focus{outline:0;border-color:var(--cy)}
+select.in option{background:#101728}
+label{display:block;font-size:13px;color:var(--dim)}
+label .in{margin-top:4px;color:var(--ink);font-size:15px}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:12px}.span{grid-column:1/-1}
+.tw{overflow:auto}
+.tbl{width:100%;border-collapse:collapse}
+.tbl th{font-weight:500;color:var(--dim);font-size:12px;text-align:start;padding:6px 8px;border-bottom:1px solid var(--line)}
+.tbl td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl tr.clk{cursor:pointer}.tbl tr.clk:hover{background:rgba(255,255,255,.04)}
+.tbl input.n{width:64px;text-align:center;padding:6px;border-radius:10px;background:rgba(255,255,255,.07);border:1px solid var(--line)}
+.tbl input.n.w{width:110px}
+.x{color:var(--rose);width:30px;height:30px;border-radius:9px}.x:hover{background:rgba(255,79,129,.15)}
+.warn{color:var(--am)}
+.tag{display:inline-block;padding:0 10px;border-radius:99px;font-size:12px;font-weight:700}
+.tag.ok{color:var(--cy);background:rgba(37,244,208,.12)}
+.tag.low{color:var(--am);background:rgba(255,176,32,.14)}
+.tag.out{color:var(--rose);background:rgba(255,79,129,.14)}
+.empty{color:var(--dim);text-align:center;padding:20px 10px}.empty.big{padding:60px 10px}
+.grid2{display:grid;grid-template-columns:1fr 330px;gap:16px;align-items:start}
+.sum{position:sticky;top:84px;display:flex;flex-direction:column;gap:12px}
+.pay{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pay button{padding:9px 4px;border-radius:12px;background:var(--glass);border:1px solid var(--line);font-size:13px}
+.pay button.on{border-color:var(--cy);color:var(--cy);background:rgba(37,244,208,.1);box-shadow:0 0 16px rgba(37,244,208,.2)}
+.tot{display:flex;justify-content:space-between;color:var(--dim)}
+.tot.f{color:var(--ink);font-size:20px;font-weight:800;padding-top:8px;border-top:1px dashed var(--line)}
+.tot.f span:last-child{color:var(--cy);text-shadow:0 0 16px rgba(37,244,208,.6)}
+.grid-inv{display:grid;grid-template-columns:270px 1fr;gap:16px;align-items:start}
+.cat{display:flex;justify-content:space-between;gap:6px;padding:8px 10px;border-radius:12px;cursor:pointer;color:var(--dim)}
+.cat:hover{background:var(--glass)}.cat.on{background:rgba(37,244,208,.12);color:var(--cy)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.mc{text-align:start;display:flex;flex-direction:column;gap:2px}
+.mc:hover{border-color:var(--cy)}
+.bal{margin-top:8px;display:flex;justify-content:space-between;align-items:center;color:var(--dim);font-size:13px}
+.bal strong{font-size:18px;color:var(--ink)}
+.bal.debt strong{color:var(--rose);text-shadow:0 0 14px rgba(255,79,129,.5)}.bal.cred strong{color:var(--cy)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.st b{display:block;font-size:22px;line-height:1.3}.st span{color:var(--dim);font-size:12px}
+.st.pr b{color:var(--cy);text-shadow:0 0 16px rgba(37,244,208,.5)}.st.rd b{color:var(--rose)}
+.dg{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+.ch{width:100%;height:auto;margin-top:8px}
+.leg{display:flex;align-items:center;gap:8px;font-size:13px;margin-top:4px}.leg i{width:10px;height:10px;border-radius:50%;flex:none}
+.pos{color:var(--cy)}.neg{color:var(--rose)}
+.mod{position:fixed;inset:0;z-index:50;background:rgba(3,6,12,.7);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:14px;animation:fd .15s}
+.mbox{width:min(640px,100%);max-height:92dvh;overflow:auto;background:rgba(16,22,38,.96);border:1px solid var(--line);border-radius:24px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 40px rgba(37,244,208,.08);animation:pop .2s cubic-bezier(.2,1.2,.4,1)}
+@keyframes fd{from{opacity:0}}@keyframes pop{from{transform:scale(.94) translateY(10px);opacity:0}}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{background:rgba(255,176,32,.12);color:var(--am);border-radius:99px;padding:2px 6px 2px 12px;display:flex;gap:6px;align-items:center;font-size:13px}
+.chip button{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.1)}
+.icons{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.ic input{display:none}.ic span{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--glass);border:1px solid var(--line);font-size:20px;cursor:pointer}
+.ic input:checked+span{border-color:var(--cy);box-shadow:0 0 14px rgba(37,244,208,.4)}
+.vid{width:100%;border-radius:16px;background:#000;margin-bottom:12px;aspect-ratio:4/3;object-fit:cover}
+.toast{position:fixed;inset-inline:0;bottom:90px;margin-inline:auto;width:max-content;max-width:90vw;z-index:80;padding:10px 20px;border-radius:99px;background:rgba(16,22,38,.96);border:1px solid var(--cy);box-shadow:0 0 30px rgba(37,244,208,.35);animation:tin .25s}
+.toast.bad{border-color:var(--rose);box-shadow:0 0 30px rgba(255,79,129,.4)}
+@keyframes tin{from{transform:translateY(20px);opacity:0}}
+.sheet{background:#fff;color:#111;border-radius:14px;padding:22px;font-size:13px;line-height:1.8}
+.sh-h{display:flex;gap:14px;align-items:center;border-bottom:3px solid #111;padding-bottom:12px}
+.sh-h h1{font-size:22px}.sh-h p{color:#555}
+.sh-h .logo svg{width:54px;height:54px}
+.sh-m{margin-inline-start:auto;display:flex;flex-direction:column;text-align:end}
+.sh-i{display:flex;gap:18px;flex-wrap:wrap;padding:10px 0}
+.sheet table{width:100%;border-collapse:collapse}
+.sheet th{background:#111;color:#fff;padding:6px 8px;text-align:start;font-weight:500}
+.sheet td{padding:6px 8px;border-bottom:1px solid #ddd}
+.sh-t{margin-top:12px;margin-inline-start:auto;width:240px}
+.sh-t div{display:flex;justify-content:space-between;padding:2px 0}
+.sh-t .f{font-weight:800;font-size:16px;border-top:2px solid #111;margin-top:4px;padding-top:4px}
+.sh-f{margin-top:20px;text-align:center;color:#666;border-top:1px dashed #bbb;padding-top:8px}
+.void{color:var(--rose);font-weight:700}
+#printroot{display:none}
+@media print{body>*:not(#printroot){display:none!important}#printroot{display:block}.sheet{border-radius:0;padding:0}body{background:#fff}}
+.lr{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.lr:last-child{border:0}.lr.clk{cursor:pointer}.lr.clk:hover{background:rgba(255,255,255,.04)}
+.lr .m{flex:1;min-width:0;overflow-wrap:anywhere}.lr .e{text-align:end;flex:none}
+.lr .dd{min-width:44px;text-align:center}
+.cl{padding:12px 2px;border-bottom:1px solid var(--line);display:grid;gap:8px}
+.cl .nm{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;overflow-wrap:anywhere}
+.cl .ctl{display:flex;align-items:center;gap:8px}
+.cl .pr{flex:1;min-width:0}
+.cl .sm{font-weight:700;min-width:84px;text-align:end;flex:none}
+.step{display:flex;align-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden;flex:none}
+.step button{width:38px;height:40px;font-size:20px;background:var(--glass)}
+.step input{width:44px;height:40px;text-align:center;background:transparent;border:0;font-size:16px;color:var(--ink)}
+.mw{position:relative}.mw .in{margin-top:0;padding-inline-end:56px}
+label .mw{margin-top:4px}
+.mw .z{position:absolute;inset-inline-end:6px;top:50%;transform:translateY(-50%);height:30px;min-width:40px;padding:0 8px;border-radius:9px;background:rgba(37,244,208,.12);color:var(--cy);font-size:13px;font-weight:700}
+.pick{margin:12px 0}
+.man{margin:0 0 10px;border:1px dashed var(--line);border-radius:14px;padding:10px 12px}
+.man summary{cursor:pointer;color:var(--cy);font-weight:700}.man form{margin-top:12px}
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg button{padding:12px 8px;border-radius:14px;background:var(--glass);border:1px solid var(--line);font-weight:700;line-height:1.5}
+.seg button.on{border-color:var(--cy);color:var(--cy);background:rgba(37,244,208,.1);box-shadow:0 0 16px rgba(37,244,208,.2)}
+.sale{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}
+.sale .cust{grid-column:1/-1}
+.ar{display:grid;grid-template-columns:64px minmax(0,1fr) auto;gap:8px;margin-top:8px}
+.ar .q{text-align:center;padding-inline:4px}
+.hint{color:var(--dim);font-size:12.5px;margin-top:8px}
+.isug{margin-top:6px}.isug .sri{background:rgba(255,255,255,.04);margin-bottom:4px}
+html{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
+body{overscroll-behavior-y:none;-webkit-touch-callout:none}
+button,.nb,.cat,.lr,.sri,.nb i{-webkit-user-select:none;user-select:none}
+input,textarea{-webkit-user-select:text;user-select:text}
+header.top{padding-top:calc(12px + env(safe-area-inset-top))}
+.ih{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px;padding:10px 14px;font-size:13px;border-color:rgba(37,244,208,.4)}
+html,body{overflow-x:hidden;max-width:100%}
+main,section,aside,.card{min-width:0}
+.fbar,.fsp{display:none}
+.fbar{position:fixed;inset-inline:10px;bottom:calc(66px + env(safe-area-inset-bottom));z-index:35;gap:10px;align-items:center;justify-content:space-between;padding:8px 8px 8px 14px;border-radius:18px;background:rgba(14,19,33,.94);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(37,244,208,.4);box-shadow:0 0 24px rgba(37,244,208,.2)}
+.fbar b{font-size:18px;color:var(--cy);text-shadow:0 0 14px rgba(37,244,208,.5)}
+@media(max-width:900px){
+ .app{grid-template-columns:minmax(0,1fr)}
+ nav.side{position:fixed;inset:auto 0 0 0;width:100%;height:auto;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px;padding:6px 4px calc(6px + env(safe-area-inset-bottom));border-top:1px solid var(--line);border-inline-end:0;z-index:40}
+ .brand,.kb{display:none}
+ .nb{flex-direction:column;gap:0;padding:6px 0;font-size:10.5px;line-height:1.5;justify-content:center;align-items:center;text-align:center;min-width:0;border-radius:12px}
+ .nb span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+ .nb i{font-size:20px}
+ .nb b{inset-inline-end:auto;inset-inline-start:calc(50% + 4px);top:0}
+ main{padding:0 10px calc(96px + env(safe-area-inset-bottom))}
+ header.top{padding:calc(10px + env(safe-area-inset-top)) 0 8px;gap:6px}
+ .ib{width:40px;height:40px;border-radius:12px}
+ #q,.in,select.in{font-size:16px}
+ .card{padding:14px;border-radius:18px}
+ .grid2,.grid-inv,.dg,.sale{grid-template-columns:minmax(0,1fr);gap:12px}
+ .sum{position:static}
+ .cats .tree{max-height:32vh;overflow:auto;margin-top:6px}
+ .cat{padding:8px 10px}
+ .tbl th,.tbl td{padding:8px 4px}
+ .cl .sm{min-width:70px;font-size:13px}.mini{width:38px;height:38px}
+ .fg{grid-template-columns:minmax(0,1fr)}
+ .stats{grid-template-columns:1fr 1fr}.st b{font-size:18px}
+ .sheet{padding:14px}.sh-h{flex-wrap:wrap}.sh-m{margin-inline-start:0;text-align:start}.sh-t{width:100%}
+ .mod{align-items:flex-end;padding:0}
+ .mbox{border-radius:24px 24px 0 0;padding:18px 16px calc(18px + env(safe-area-inset-bottom));max-height:90dvh}
+ .toast{bottom:150px}
+ .fbar{display:flex}.fsp{display:block;height:74px}
+ #net{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <nav class="side" id="nav"></nav>
+  <main>
+    <header class="top">
+      <div class="sw">
+        <input id="q" type="search" autocomplete="off" enterkeyhint="search" placeholder="استعلام سریع: نام، کد فنی، بارکد، خودرو…  (F2)">
+        <div class="sr" id="sr" hidden></div>
+      </div>
+      <button class="ib" data-act="scan" title="اسکن بارکد با دوربین" aria-label="اسکن بارکد">📷</button>
+      <button class="ib" data-act="settings" title="تنظیمات" aria-label="تنظیمات">⚙️</button>
+      <span id="net"></span>
+    </header>
+    <div id="view"></div>
+  </main>
+</div>
+<div id="printroot"></div>
+
+<script>
+'use strict';
+/* ---------- ابزارها ---------- */
+const $=(s,r=document)=>r.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fa=n=>Number(n||0).toLocaleString('fa-IR');
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const norm=s=>String(s??'').toLowerCase().replace(/[۰-۹]/g,d=>'۰۱۲۳۴۵۶۷۸۹'.indexOf(d)).replace(/[٠-٩]/g,d=>'٠١٢٣٤٥٦٧٨٩'.indexOf(d)).replace(/ي/g,'ی').replace(/ك/g,'ک').replace(/\s+/g,' ').trim();
+const num=s=>+norm(s).replace(/[,٬،]/g,'')||0;
+const fmt=n=>Number(n||0).toLocaleString('en-US');
+const moneyIn=(name,val,attrs='')=>`<div class="mw"><input class="in money" ${name?`name="${name}"`:''} ${attrs} inputmode="numeric" autocomplete="off" value="${val?fmt(val):''}"><button type="button" class="z" data-act="zeros" tabindex="-1" aria-label="سه صفر">۰۰۰</button></div>`;
+const jdate=(t,o)=>new Intl.DateTimeFormat('fa-IR-u-ca-persian',o||{dateStyle:'medium'}).format(new Date(t));
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const METH={cash:'نقدی',card:'کارتخوان',credit:'نسیه / روی حساب'};
+const ICONS=['🚗','🚙','🚘','🚐','🛻','🏎️','⚙️','🔩','🛞','⚡','🛑','🛢️','🔧','🧰','💡','❄️','🪟','📁'];
+const TABS=[{id:'sale',t:'فروش',i:'🧾'},{id:'inv',t:'انبار',i:'📦'},{id:'mech',t:'مکانیک‌ها',i:'🔧'},{id:'invs',t:'فاکتورها',i:'📑'},{id:'stock',t:'انبارگردانی',i:'✅'},{id:'dash',t:'داشبورد',i:'📊'}];
+const LOGO='<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"><path d="M32 6l22 13v26L32 58 10 45V19z"/><path d="M32 22v20M22 32h20"/></svg>';
+
+/* ---------- ذخیره‌سازی آفلاین (IndexedDB) ---------- */
+const DB={
+  open(){return new Promise((res,rej)=>{const r=indexedDB.open('irankhodro-pharmacy',1);r.onupgradeneeded=()=>r.result.createObjectStore('kv');r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error)})},
+  async get(k){const db=await this.open();return new Promise((res,rej)=>{const q=db.transaction('kv').objectStore('kv').get(k);q.onsuccess=()=>res(q.result);q.onerror=()=>rej(q.error)})},
+  async set(k,v){const db=await this.open();return new Promise((res,rej)=>{const t=db.transaction('kv','readwrite');t.objectStore('kv').put(v,k);t.oncomplete=()=>res();t.onerror=()=>rej(t.error)})}
+};
+const DEF=()=>({v:2,updatedAt:0,seq:1001,cats:[],parts:[],mechs:[],invoices:[],payments:[],audits:[],
+  draft:{items:[],mech:'',buyer:'',kind:'walk',method:'cash',discount:0},
+  settings:{shop:'داروخانه ایرانخودرو',addr:'',phone:'',sound:true,syncUrl:'',token:''},
+  ui:{tab:'sale',cat:'',pf:''}});
+const hydrate=s=>{const d=DEF();return {...d,...s,draft:{...d.draft,...s.draft},settings:{...d.settings,...s.settings},ui:{...d.ui,...s.ui}}};
+let S=null;const U={sel:0,res:[],counts:{},alts:[],sf:'',iff:''};
+let saveT,pushT;
+function save(){S.updatedAt=Date.now();clearTimeout(saveT);saveT=setTimeout(()=>DB.set('state',S).catch(()=>toast('ذخیره‌سازی مرورگر پر یا غیرفعال است',1)),150);clearTimeout(pushT);pushT=setTimeout(push,2000)}
+
+/* ---------- همگام‌سازی اختیاری با سرور ---------- */
+const base=()=>(S.settings.syncUrl||'').replace(/\/+$/,'');
+const hdr=()=>({'content-type':'application/json',...(S.settings.token?{'x-token':S.settings.token}:{})});
+const net=t=>{$('#net').textContent=(navigator.onLine?'🟢 آنلاین':'🟠 آفلاین')+(t?' · '+t:'')};
+async function pull(){
+  if(!base()||!navigator.onLine)return;
+  try{
+    const r=await fetch(base()+'/api/state',{headers:hdr()});if(!r.ok)throw 0;const s=await r.json();
+    if(s.updatedAt&&s.updatedAt>S.updatedAt){const k=S.settings;S=hydrate(s);S.settings={...S.settings,syncUrl:k.syncUrl,token:k.token};await DB.set('state',S);render();net('همگام ✓')}
+    else if(S.updatedAt>(s.updatedAt||0))push();else net('همگام ✓');
+  }catch{net('خطای همگام‌سازی')}
+}
+async function push(){
+  if(!base()||!navigator.onLine)return;
+  try{const r=await fetch(base()+'/api/state',{method:'PUT',headers:hdr(),body:JSON.stringify(S)});net(r.ok?'همگام ✓':'خطای همگام‌سازی')}catch{net('خطای همگام‌سازی')}
+}
+addEventListener('online',()=>{net();pull()});addEventListener('offline',()=>net());
+
+/* ---------- صدا ---------- */
+let AC;
+function beep(seq){
+  if(!S.settings.sound)return;
+  try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();if(AC.state==='suspended')AC.resume();let t=AC.currentTime;
+    seq.forEach(([f,d,ty])=>{const o=AC.createOscillator(),g=AC.createGain();o.type=ty||'sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.22,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d);t+=d*.8});}catch{}
+}
+const sfx={add:()=>beep([[880,.07,'square'],[1320,.09,'square']]),done:()=>beep([[988,.09,'square'],[1319,.09,'square'],[1568,.2,'square']]),err:()=>beep([[220,.22,'sawtooth']])};
+function toast(m,bad){const t=document.createElement('div');t.className='toast'+(bad?' bad':'');t.textContent=m;document.body.appendChild(t);setTimeout(()=>t.remove(),2200)}
+
+/* ---------- داده‌ی نمونه ---------- */
+const BRANCHES=[['پراید','🚘'],['پیکان','🚗'],['پژو','🚙'],['سمند','🚙'],['ال نود (L90)','🚐'],['۲۰۶','🏎️'],['تیبا','🚘'],['ساینا','🚘'],['پارس ELX','🚙'],['پارس','🚙']];
+function ensureBranches(){BRANCHES.forEach(([n,i])=>{if(!S.cats.some(c=>!c.parent&&norm(c.name)===norm(n)))S.cats.push({id:uid(),name:n,icon:i,parent:''})})}
+function seed(){ensureBranches()}
+function isDemo(){return !S.invoices.length&&!S.payments.length&&S.cats.some(c=>c.id==='c1')&&S.parts.every(p=>/^62600010000/.test(p.barcode))}
+
+/* ---------- کمک‌تابع‌های داده ---------- */
+const partById=id=>S.parts.find(p=>p.id===id);
+const catById=id=>S.cats.find(c=>c.id===id);
+const mechById=id=>S.mechs.find(m=>m.id===id);
+const desc=id=>{const o=[];S.cats.filter(c=>c.parent===id).forEach(c=>{o.push(c.id,...desc(c.id))});return o};
+const catPath=id=>{const o=[];let c=catById(id);while(c){o.unshift(c.name);c=catById(c.parent)}return o.join(' › ')};
+const countIn=id=>{const ids=[id,...desc(id)];return S.parts.filter(p=>ids.includes(p.cat)).length};
+const sc=p=>p.stock<=0?'out':p.stock<=p.min?'low':'ok';
+const bal=mid=>S.invoices.filter(i=>!i.void&&i.mech===mid&&i.method==='credit').reduce((s,i)=>s+i.total,0)-S.payments.filter(p=>p.mech===mid).reduce((s,p)=>s+p.amount,0);
+const cartSub=()=>S.draft.items.reduce((s,x)=>s+x.qty*x.price,0);
+function findParts(q){
+  q=norm(q);if(!q)return[];const w=q.split(' ');
+  const ex=S.parts.filter(p=>p.barcode===q||norm(p.code)===q);
+  const rest=S.parts.filter(p=>!ex.includes(p)&&w.every(x=>norm([p.name,p.code,p.barcode,p.car,catPath(p.cat)].join(' ')).includes(x)));
+  return [...ex,...rest].slice(0,12);
+}
+function setAlts(p,ids){
+  S.parts.forEach(x=>{if(x.id===p.id)return;const has=x.alts.includes(p.id),want=ids.includes(x.id);if(want&&!has)x.alts.push(p.id);if(!want&&has)x.alts=x.alts.filter(i=>i!==p.id)});
+  p.alts=[...ids];
+}
+function catOpts(sel,exclude){
+  const bad=exclude?[exclude,...desc(exclude)]:[];
+  return S.cats.filter(c=>!bad.includes(c.id)).map(c=>({id:c.id,p:catPath(c.id)})).sort((a,b)=>a.p.localeCompare(b.p,'fa')).map(o=>`<option value="${o.id}" ${o.id===sel?'selected':''}>${esc(o.p)}</option>`).join('');
+}
+
+/* ---------- سبد فاکتور ---------- */
+function addToCart(id){
+  const p=partById(id);if(!p)return;
+  const it=S.draft.items.find(x=>x.pid===id);
+  if(it)it.qty++;else S.draft.items.push({pid:id,name:p.name,qty:1,price:p.sell,buy:p.buy});
+  const cur=S.draft.items.find(x=>x.pid===id);
+  if(cur.qty>p.stock){toast('موجودی کافی نیست ('+fa(p.stock)+' عدد)',1);sfx.err()}else{sfx.add();toast('به فاکتور افزوده شد')}
+  save();if(S.ui.tab==='sale')render();else updBadge();
+}
+function finalize(){
+  const d=S.draft;
+  if(!d.items.length){toast('فاکتور خالی است',1);sfx.err();return}
+  let mech=null;const walk=d.kind!=='mech';const mn=walk?'':(d.mech||'').trim();
+  if(walk&&d.method==='credit')d.method='cash';
+  if(!walk&&!mn){toast('نام مکانیک را وارد کن',1);sfx.err();return}
+  if(mn){mech=S.mechs.find(m=>norm(m.name)===norm(mn));if(!mech){mech={id:uid(),name:mn,phone:''};S.mechs.push(mech)}}
+  if(d.method==='credit'&&!mech){toast('برای نسیه، نام مکانیک را وارد کنید',1);sfx.err();return}
+  const sub=cartSub(),disc=Math.min(num(d.discount),sub);
+  const inv={id:uid(),no:S.seq++,date:Date.now(),mech:mech?mech.id:'',mechName:mech?mech.name:'',buyer:d.buyer||'',method:d.method,discount:disc,total:sub-disc,items:d.items.map(x=>({...x}))};
+  inv.items.forEach(x=>{const p=partById(x.pid);if(p)p.stock-=x.qty});
+  S.invoices.push(inv);S.draft={items:[],mech:'',buyer:'',kind:'walk',method:'cash',discount:0};
+  save();sfx.done();render();showInv(inv.id);
+}
+
+/* ---------- مودال ---------- */
+function openModal(html){closeModal();const m=document.createElement('div');m.className='mod';m.id='mod';m.innerHTML='<div class="mbox">'+html+'</div>';m.addEventListener('mousedown',e=>{if(e.target===m)closeModal()});document.body.appendChild(m);const f=m.querySelector('input:not([type=hidden]):not([type=radio]),select');if(f&&innerWidth>900)f.focus()}
+function closeModal(){U.fromSale=false;if(U.stopScan){U.stopScan();U.stopScan=null}const m=$('#mod');if(m)m.remove()}
+
+/* ---------- نماها ---------- */
+const V={};
+V.sale=()=>{
+  const d=S.draft,sub=cartSub(),disc=Math.min(num(d.discount),sub),mech=d.kind==='mech';
+  const lines=d.items.map((it,i)=>{const p=partById(it.pid);const low=p&&it.qty>p.stock;
+    return `<div class="cl"><div class="nm"><b>${esc(it.name)}</b><button class="x" data-act="del" data-i="${i}" aria-label="حذف">✕</button></div>${low?`<small class="warn">موجودی فقط ${fa(p.stock)} عدد</small>`:''}
+    <div class="ctl"><div class="step"><button data-act="dec" data-i="${i}" aria-label="کم">−</button><input class="n" inputmode="numeric" data-in="qty" data-i="${i}" value="${it.qty}" aria-label="تعداد"><button data-act="inc" data-i="${i}" aria-label="زیاد">+</button></div>
+    <input class="in money pr" inputmode="numeric" data-in="price" data-i="${i}" value="${fmt(it.price)}" aria-label="قیمت واحد (ریال)"><span class="sm">${fa(it.qty*it.price)}</span></div></div>`}).join('');
+  const methods=(mech?['credit','cash','card']:['cash','card']).map(k=>`<button class="${d.method===k?'on':''}" data-act="method" data-v="${k}">${METH[k]}</button>`).join('');
+  return `<div class="sale">
+  <section class="card cust"><div class="row between wrap g"><h2>۱. مشتری</h2><button class="btn ghost" data-act="clearcart">فروش جدید</button></div>
+   <div class="seg" style="margin-top:10px"><button class="${!mech?'on':''}" data-act="kind" data-v="walk">🚶 رهگذر / مشتری متفرقه</button><button class="${mech?'on':''}" data-act="kind" data-v="mech">🔧 مکانیک / حساب دفتری</button></div>
+   ${mech?`<label style="margin-top:10px">نام مکانیک (مثلاً کبرا)<div class="mw"><input class="in" list="ml" data-in="draft" data-k="mech" value="${esc(d.mech)}" placeholder="انتخاب یا نوشتن نام"><button type="button" class="z" data-act="newmechsale" aria-label="حساب جدید">＋</button></div></label>
+   <datalist id="ml">${S.mechs.map(m=>`<option value="${esc(m.name)}">`).join('')}</datalist>
+   <label style="margin-top:10px">توضیح — اختیاری (مثلاً: برای پژو آقای احمدی)<input class="in" data-in="draft" data-k="buyer" value="${esc(d.buyer)}"></label>
+   <div class="hint">هرچه این مکانیک بردارد روی حساب خودش ثبت می‌شود و بعداً از بخش «مکانیک‌ها» تسویه می‌کنی.</div>`
+   :`<label style="margin-top:10px">نام — اختیاری<input class="in" data-in="draft" data-k="buyer" value="${esc(d.buyer)}"></label>
+   <div class="hint">برای کسی که یک قطعه می‌خرد و می‌رود: فقط اقلام را بزن و ثبت کن.</div>`}
+  </section>
+  <section class="card"><h2>۲. اقلام</h2>
+   <form id="mi"><input class="in" name="name" list="pl2" data-inp="iname" autocomplete="off" required placeholder="نام قطعه یا کالا را بنویس (از انبار یا هر چیز دلخواه)" style="margin-top:10px">
+    <div id="isug" class="isug"></div>
+    <div class="ar"><input class="in q" name="qty" inputmode="numeric" value="1" aria-label="تعداد">${moneyIn('price','','placeholder="قیمت (ریال)"')}<button class="btn">＋ افزودن</button></div></form>
+   <div style="margin-top:8px">${lines||'<div class="empty">هنوز چیزی اضافه نشده.<br>اسم کالا را بنویس، قیمت را بزن و «افزودن» را بزن.<br>اگر کالا در انبار باشد، قیمتش خودکار پر می‌شود.</div>'}</div>
+  </section>
+  <aside class="card sum"><h2>۳. پرداخت</h2>
+   <div class="pay">${methods}</div>
+   <label>تخفیف (ریال)${moneyIn('',d.discount,'data-in="draft" data-k="discount"')}</label>
+   <div class="tot"><span>جمع اقلام</span><span>${fa(sub)}</span></div>
+   ${disc?`<div class="tot"><span>تخفیف</span><span>${fa(disc)}−</span></div>`:''}
+   <div class="tot f"><span>قابل پرداخت</span><span>${fa(sub-disc)} ریال</span></div>
+   <button class="btn big" data-act="finalize">ثبت نهایی  (F9)</button>
+  </aside></div>${d.items.length?`<div class="fsp"></div><div class="fbar"><div><small>قابل پرداخت</small><b>${fa(sub-disc)} ریال</b></div><button class="btn" data-act="finalize">ثبت نهایی</button></div>`:''}`;
+};
+function tree(pid='',d=0){return S.cats.filter(c=>c.parent===pid).map(c=>`<div class="cat ${S.ui.cat===c.id?'on':''}" style="padding-inline-start:${d*16+10}px" data-act="selcat" data-id="${c.id}"><span>${c.icon||'📁'} ${esc(c.name)}</span><small>${fa(countIn(c.id))}</small></div>`+tree(c.id,d+1)).join('')}
+function plist(){
+  const ids=S.ui.cat?[S.ui.cat,...desc(S.ui.cat)]:null,f=norm(S.ui.pf);
+  const rows=S.parts.filter(p=>(!ids||ids.includes(p.cat))&&(!f||norm([p.name,p.code,p.barcode,p.car].join(' ')).includes(f)));
+  if(!rows.length)return '<div class="empty">قطعه‌ای در این بخش نیست.<br>با «＋ قطعه» اضافه کن.</div>';
+  return rows.slice(0,300).map(p=>`<div class="lr"><div class="m"><b>${esc(p.name)}</b><small>${esc(p.code)}${p.car?' · '+esc(p.car):''}</small><small>خرید ${fa(p.buy)} · فروش ${fa(p.sell)} ریال</small></div><div class="e"><span class="tag ${sc(p)}">${fa(p.stock)}</span></div><button class="mini" data-act="editpart" data-id="${p.id}" aria-label="ویرایش">✎</button></div>`).join('')+(rows.length>300?`<div class="hint">۳۰۰ مورد اول از ${fa(rows.length)} نمایش داده شد؛ با فیلتر یا انتخاب شاخه محدودترش کن.</div>`:'');
+}
+V.inv=()=>`<div class="grid-inv">
+ <section class="card cats"><div class="row between"><h2>دسته‌بندی</h2><div class="row g"><button class="mini" data-act="addcat" title="دسته‌ی جدید داخل انتخاب‌شده">＋</button><button class="mini" data-act="editcat" title="ویرایش">✎</button><button class="mini" data-act="delcat" title="حذف">🗑</button></div></div>
+  <div class="tree"><div class="cat ${!S.ui.cat?'on':''}" data-act="selcat" data-id=""><span>🗂️ همه‌ی قطعات</span><small>${fa(S.parts.length)}</small></div>${tree()}</div></section>
+ <section class="card"><div class="row between wrap g"><h2>قطعات</h2><div class="row g"><input class="in" placeholder="فیلتر…" data-inp="pf" value="${esc(S.ui.pf)}"><button class="btn ghost" data-act="bulk">ابزار انبار</button><button class="btn" data-act="newpart">＋ قطعه</button></div></div><div class="tw" id="plist">${plist()}</div></section></div>`;
+V.mech=()=>`<div class="row between wrap"><h2 class="ph">مکانیک‌ها</h2><button class="btn" data-act="newmech">＋ مکانیک جدید</button></div>
+ <div class="cards">${S.mechs.map(m=>{const b=bal(m.id);return `<button class="card mc" data-act="mech" data-id="${m.id}"><b>${esc(m.name)}</b><small>${esc(m.phone||'')}</small><div class="bal ${b>0?'debt':b<0?'cred':''}"><span>${b>0?'بدهکار':b<0?'بستانکار':'تسویه'}</span><strong>${fa(Math.abs(b))}</strong></div></button>`}).join('')||'<div class="empty">هنوز مکانیکی ثبت نشده است.</div>'}</div>`;
+function invRows(){
+  const f=norm(U.iff);
+  const rows=[...S.invoices].reverse().filter(i=>!f||norm([i.no,i.mechName,i.buyer].join(' ')).includes(f)).slice(0,200);
+  if(!rows.length)return '<div class="empty">فاکتوری پیدا نشد.</div>';
+  return rows.map(i=>`<div class="lr clk" data-act="inv" data-id="${i.id}"><div class="m"><b>فاکتور ${fa(i.no)}</b><small>${esc(i.mechName||i.buyer||'—')} · ${METH[i.method]}</small><small>${jdate(i.date,{dateStyle:'short',timeStyle:'short'})}</small></div><div class="e">${i.void?'<span class="void">باطل</span>':`<b>${fa(i.total)}</b><small>ریال</small>`}</div></div>`).join('');
+}
+V.invs=()=>`<div class="row between wrap g"><h2 class="ph">فاکتورها</h2><input class="in" style="max-width:260px" placeholder="شماره، مکانیک یا خریدار…" data-inp="if" value="${esc(U.iff)}"></div><div class="card tw" id="ilist">${invRows()}</div>`;
+const cntDiff=()=>Object.entries(U.counts).filter(([id,v])=>v!==undefined&&partById(id)&&partById(id).stock!==v).length;
+function stRows(){
+  const f=norm(U.sf);const rows=S.parts.filter(p=>!f||norm([p.name,p.code,p.barcode].join(' ')).includes(f)).slice(0,300);
+  if(!rows.length)return '<div class="empty">قطعه‌ای نیست.</div>';
+  return rows.map(p=>{const c=U.counts[p.id],df=c===undefined?'':c-p.stock;return `<div class="lr"><div class="m"><b>${esc(p.name)}</b><small>${esc(p.code)} · در سیستم: ${fa(p.stock)}</small></div><input class="in" style="width:76px;text-align:center" inputmode="numeric" placeholder="شمارش" data-inp="count" data-id="${p.id}" value="${c===undefined?'':c}"><b id="d-${p.id}" class="dd ${df>0?'pos':df<0?'neg':''}">${df===''?'':(df>0?'+':'')+fa(df)}</b></div>`}).join('');
+}
+V.stock=()=>`<div class="row between wrap g"><h2 class="ph">انبارگردانی</h2><div class="row g"><input class="in" placeholder="فیلتر…" data-inp="sf" value="${esc(U.sf)}"><button class="btn" data-act="applycount">اعمال شمارش (<span id="cn">${fa(cntDiff())}</span>)</button></div></div><div class="card tw" id="stlist">${stRows()}</div>`;
+
+function line(days){
+  const W=320,H=120,mx=Math.max(1,...days.map(d=>d.v)),n=days.length;
+  const pts=days.map((d,i)=>[W-i*W/(n-1),H-8-(d.v/mx)*(H-28)]);
+  const path=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join('');
+  const lb=(i,a)=>`<text x="${pts[i][0]}" y="${H+14}" fill="#8d9ab8" font-size="9" text-anchor="${a}">${jdate(days[i].t,{month:'numeric',day:'numeric'})}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H+18}" class="ch" role="img" aria-label="نمودار فروش ۱۴ روز اخیر"><defs><linearGradient id="ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#25f4d0" stop-opacity=".35"/><stop offset="1" stop-color="#25f4d0" stop-opacity="0"/></linearGradient><filter id="gl" x="-10%" y="-30%" width="120%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><path d="${path}L0 ${H}L${W} ${H}Z" fill="url(#ga)"/><path d="${path}" fill="none" stroke="#25f4d0" stroke-width="2.5" stroke-linejoin="round" filter="url(#gl)"/>${pts.map(p=>`<circle cx="${p[0]}" cy="${p[1]}" r="2.6" fill="#07101a" stroke="#25f4d0" stroke-width="1.5"/>`).join('')}${lb(0,'end')}${lb(Math.floor(n/2),'middle')}${lb(n-1,'start')}</svg>`;
+}
+function donut(top){
+  const C=2*Math.PI*42,tot=top.reduce((s,t)=>s+t[1],0)||1,col=['#25f4d0','#8b7bff','#ffb020','#ff4f81','#5ab0ff'];let off=0;
+  const segs=top.map((t,i)=>{const l=t[1]/tot*C;const s=`<circle r="42" cx="60" cy="60" fill="none" stroke="${col[i]}" stroke-width="14" stroke-dasharray="${l.toFixed(1)} ${(C-l).toFixed(1)}" stroke-dashoffset="${(-off).toFixed(1)}" transform="rotate(-90 60 60)" style="filter:drop-shadow(0 0 4px ${col[i]})"/>`;off+=l;return s}).join('');
+  return `<svg viewBox="0 0 120 120" style="width:150px;display:block;margin:6px auto" role="img" aria-label="پرفروش‌ترین قطعات"><circle r="42" cx="60" cy="60" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="14"/>${segs}</svg>`+top.map((t,i)=>`<div class="leg"><i style="background:${col[i]}"></i><span>${esc(t[0])}</span><small style="margin-inline-start:auto">${fa(t[1])}</small></div>`).join('');
+}
+V.dash=()=>{
+  const inv=S.invoices.filter(i=>!i.void),now=Date.now(),k=t=>new Date(t).toDateString();
+  const prof=i=>i.items.reduce((s,x)=>s+(x.price-x.buy)*x.qty,0)-(i.discount||0);
+  const sum=(a,f)=>a.reduce((s,x)=>s+f(x),0);
+  const td=inv.filter(i=>k(i.date)===k(now)),mo=inv.filter(i=>now-i.date<30*864e5);
+  const days=[...Array(14)].map((_,j)=>{const t=now-(13-j)*864e5;return{t,v:sum(inv.filter(i=>k(i.date)===k(t)),i=>i.total)}});
+  const agg={};inv.forEach(i=>i.items.forEach(x=>agg[x.name]=(agg[x.name]||0)+x.qty));
+  const top=Object.entries(agg).sort((a,b)=>b[1]-a[1]).slice(0,5);
+  const low=S.parts.filter(p=>p.stock<=p.min).sort((a,b)=>a.stock-b.stock);
+  const debt=sum(S.mechs,m=>Math.max(0,bal(m.id)));
+  return `<h2 class="ph">داشبورد</h2><div class="stats">
+   <div class="card st"><b>${fa(sum(td,i=>i.total))}</b><span>فروش امروز (ریال)</span></div>
+   <div class="card st pr"><b>${fa(sum(td,prof))}</b><span>سود خالص امروز</span></div>
+   <div class="card st"><b>${fa(sum(mo,i=>i.total))}</b><span>فروش ۳۰ روز اخیر</span></div>
+   <div class="card st pr"><b>${fa(sum(mo,prof))}</b><span>سود خالص ۳۰ روز</span></div>
+   <div class="card st rd"><b>${fa(debt)}</b><span>طلب از مکانیک‌ها</span></div></div>
+  <div class="dg"><section class="card"><h2>فروش ۱۴ روز اخیر</h2>${line(days)}</section>
+  <section class="card"><h2>پرفروش‌ترین قطعات</h2>${top.length?donut(top):'<div class="empty">هنوز فروشی ثبت نشده.</div>'}</section></div>
+  <section class="card" style="margin-top:16px"><h2 class="ph">قطعات رو به اتمام (${fa(low.length)})</h2>${low.length?`<div class="tw"><table class="tbl"><tbody>${low.slice(0,30).map(p=>`<tr><td>${esc(p.name)}<small>${esc(catPath(p.cat))}</small></td><td><span class="tag ${sc(p)}">${p.stock<=0?'ناموجود':fa(p.stock)+' عدد'}</span></td><td><small>حد هشدار ${fa(p.min)}</small></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">همه‌ی قطعات موجودی کافی دارند.</div>'}</section>`;
+};
+
+/* ---------- رندر اصلی ---------- */
+function updBadge(){const b=$('#cb');if(b)b.textContent=S.draft.items.length?fa(S.draft.items.reduce((s,x)=>s+x.qty,0)):''}
+function render(){
+  $('#nav').innerHTML=`<div class="brand">${LOGO.replace('<svg','<svg style="color:#25f4d0"')}<span>${esc(S.settings.shop)}</span></div>`+TABS.map(t=>`<button class="nb ${S.ui.tab===t.id?'on':''}" data-act="tab" data-t="${t.id}"><i>${t.i}</i><span>${t.t}</span>${t.id==='sale'?'<b id="cb"></b>':''}</button>`).join('')+`<div class="kb"><kbd>F2</kbd> جستجو<br><kbd>Enter</kbd> افزودن<br><kbd>F9</kbd> ثبت فاکتور<br><kbd>Esc</kbd> بستن<br><kbd>Alt</kbd>+<kbd>۱..۶</kbd> صفحات</div>`;
+  $('#view').innerHTML=V[S.ui.tab]();updBadge();net();
+}
+const go=t=>{S.ui.tab=t;save();render();scrollTo(0,0)};
+
+/* ---------- جستجوی سریع ---------- */
+const altHTML=p=>{const a=p.alts.map(partById).filter(x=>x&&x.stock>0);return a.length?`<small class="alt">جایگزین موجود: ${a.map(x=>`<span data-act="add" data-id="${x.id}">${esc(x.name)} (${fa(x.stock)})</span>`).join('، ')}</small>`:'<small class="alt">جایگزینی موجود نیست</small>'};
+function renderSR(){
+  const q=$('#q').value,box=$('#sr');
+  if(!q.trim()){box.hidden=true;return}
+  const r=findParts(q);U.res=r;U.sel=Math.max(0,Math.min(U.sel,r.length-1));box.hidden=false;
+  box.innerHTML=r.length?r.map((p,i)=>`<div class="sri ${i===U.sel?'on':''}" data-act="add" data-id="${p.id}"><div><b>${esc(p.name)}</b><small>${esc(p.code)}${p.car?' · '+esc(p.car):''}${p.cat?' · '+esc(catPath(p.cat)):''}</small>${p.stock<=0?altHTML(p):''}</div><div class="r"><span class="tag ${sc(p)}">${p.stock<=0?'ناموجود':fa(p.stock)+' عدد'}</span><b>${fa(p.sell)}</b></div></div>`).join(''):`<div class="empty">قطعه‌ای پیدا نشد. <a href="#" data-act="newpart" data-name="${esc(q)}" style="color:var(--cy)">ثبت قطعه‌ی جدید</a></div>`;
+}
+$('#q').addEventListener('input',()=>{U.sel=0;renderSR()});
+$('#q').addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();U.sel=Math.max(0,Math.min(U.res.length-1,U.sel+(e.key==='ArrowDown'?1:-1)));renderSR()}
+  else if(e.key==='Enter'){e.preventDefault();const p=U.res[U.sel];if(p)A.add({id:p.id});else if($('#q').value.trim())toast('قطعه‌ای پیدا نشد',1)}
+});
+
+/* ---------- اسکن با دوربین ---------- */
+async function scan(){
+  if(!('BarcodeDetector' in window)){toast('این مرورگر اسکن دوربین ندارد؛ با بارکدخوان داخل کادر جستجو اسکن کنید',1);$('#q').focus();return}
+  let stream;try{stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}})}catch{toast('دسترسی به دوربین داده نشد',1);return}
+  openModal('<h3>اسکن بارکد</h3><video id="vid" playsinline muted autoplay class="vid"></video><button class="btn ghost" data-act="close">بستن</button>');
+  const v=$('#vid');v.srcObject=stream;const det=new BarcodeDetector();let on=true;
+  U.stopScan=()=>{on=false;stream.getTracks().forEach(t=>t.stop())};
+  const loop=async()=>{if(!on)return;try{const r=await det.detect(v);if(r[0]){const code=r[0].rawValue,p=S.parts.find(x=>x.barcode===code);if(p)addToCart(p.id);else{toast('بارکد ناشناخته: '+code,1);sfx.err()}await sleep(1300)}}catch{}if(on)requestAnimationFrame(loop)};
+  v.onplaying=loop;
+}
+
+/* ---------- فاکتور: نمایش، چاپ، اشتراک ---------- */
+function invHTML(i){
+  const st=S.settings;
+  return `<div class="sheet"><div class="sh-h"><div class="logo">${LOGO}</div><div><h1>${esc(st.shop)}</h1><p>${esc(st.addr)}${st.phone?' — تلفن: '+esc(st.phone):''}</p></div><div class="sh-m"><b>فاکتور فروش${i.void?' (باطل)':''}</b><span>شماره: ${fa(i.no)}</span><span>${jdate(i.date,{dateStyle:'medium',timeStyle:'short'})}</span></div></div>
+  <div class="sh-i"><span>خریدار: ${esc(i.buyer||'—')}</span><span>مکانیک: ${esc(i.mechName||'—')}</span><span>پرداخت: ${METH[i.method]}</span></div>
+  <table><thead><tr><th>#</th><th>شرح کالا</th><th>تعداد</th><th>فی (ریال)</th><th>مبلغ</th></tr></thead><tbody>${i.items.map((x,n)=>`<tr><td>${fa(n+1)}</td><td>${esc(x.name)}</td><td>${fa(x.qty)}</td><td>${fa(x.price)}</td><td>${fa(x.qty*x.price)}</td></tr>`).join('')}</tbody></table>
+  <div class="sh-t"><div><span>جمع</span><span>${fa(i.total+i.discount)}</span></div>${i.discount?`<div><span>تخفیف</span><span>${fa(i.discount)}</span></div>`:''}<div class="f"><span>قابل پرداخت</span><span>${fa(i.total)} ریال</span></div></div>
+  <div class="sh-f">با سپاس از خرید شما</div></div>`;
+}
+function showInv(id){
+  const i=S.invoices.find(x=>x.id===id);if(!i)return;
+  openModal(`${invHTML(i)}<div class="row g end wrap"><button class="btn ghost" data-act="close">بستن</button>${i.void?'':`<button class="btn ghost danger" data-act="voidinv" data-id="${id}">ابطال فاکتور</button>`}<button class="btn ghost" data-act="shareinv" data-id="${id}">ارسال</button><button class="btn" data-act="printinv" data-id="${id}">چاپ / PDF</button></div>`);
+}
+function showMech(id){
+  const m=mechById(id);if(!m)return;
+  const ev=[];S.invoices.filter(i=>!i.void&&i.mech===id&&i.method==='credit').forEach(i=>ev.push({t:i.date,l:'فاکتور '+fa(i.no),a:i.total}));
+  S.payments.filter(p=>p.mech===id).forEach(p=>ev.push({t:p.date,l:'تسویه'+(p.note?' — '+p.note:''),a:-p.amount}));
+  ev.sort((a,b)=>a.t-b.t);let run=0;ev.forEach(e=>{run+=e.a;e.r=run});
+  const bought=S.invoices.filter(i=>!i.void&&i.mech===id).reduce((s,i)=>s+i.total,0),b=bal(id);
+  openModal(`<div class="row between"><h3>${esc(m.name)}</h3><button class="mini" data-act="editmech" data-id="${id}" aria-label="ویرایش">✎</button></div>
+  <div class="stats"><div class="card st"><b>${fa(bought)}</b><span>کل خرید</span></div><div class="card st ${b>0?'rd':'pr'}"><b>${fa(Math.abs(b))}</b><span>${b>0?'بدهکار':b<0?'بستانکار':'تسویه'}</span></div></div>
+  <form id="pay" data-id="${id}" class="fg"><label>مبلغ پرداختی (ریال)${moneyIn('amount','')}</label><label>توضیح<input class="in" name="note" placeholder="نقد / کارت به کارت…"></label><button class="btn span">ثبت تسویه‌حساب</button></form>
+  <h2 style="margin:16px 0 6px">دفتر حساب</h2>${ev.length?`<div class="tw"><table class="tbl"><thead><tr><th>تاریخ</th><th>شرح</th><th>مبلغ</th><th>مانده</th></tr></thead><tbody>${[...ev].reverse().map(e=>`<tr><td>${jdate(e.t)}</td><td>${e.l}</td><td class="${e.a>0?'neg':'pos'}">${e.a>0?'+':'−'}${fa(Math.abs(e.a))}</td><td>${fa(e.r)}</td></tr>`).join('')}</tbody></table></div>`:'<div class="empty">تراکنشی ثبت نشده.</div>'}
+  <div class="row end"><button class="btn ghost" data-act="close">بستن</button></div>`);
+}
+function partModal(p,name){
+  const isNew=!p;p=p||{id:'',name:name||'',code:'',barcode:'',car:'',cat:S.ui.cat||'',buy:0,sell:0,stock:0,min:2,alts:[]};U.alts=[...p.alts];
+  openModal(`<form id="pf" data-id="${p.id}"><h3>${isNew?'قطعه‌ی جدید':'ویرایش قطعه'}</h3><div class="fg">
+   <label class="span">نام قطعه<input class="in" name="name" required value="${esc(p.name)}"></label>
+   <label>کد فنی<input class="in" name="code" value="${esc(p.code)}"></label>
+   <label>بارکد<input class="in" name="barcode" id="bc" value="${esc(p.barcode)}" inputmode="numeric"></label>
+   <label>خودرو / سازگاری<input class="in" name="car" value="${esc(p.car)}"></label>
+   <label>دسته‌بندی<select class="in" name="cat"><option value="">— بدون دسته —</option>${catOpts(p.cat)}</select></label>
+   <label>قیمت خرید (ریال)${moneyIn('buy',p.buy)}</label>
+   <label>قیمت فروش (ریال)${moneyIn('sell',p.sell)}</label>
+   <label>موجودی<input class="in" name="stock" inputmode="numeric" value="${p.stock}"></label>
+   <label>حد هشدار<input class="in" name="min" inputmode="numeric" value="${p.min}"></label></div>
+   <label style="margin-top:12px">قطعات جایگزین / مشابه<input class="in" list="pl" data-inp="altin" placeholder="نام قطعه را انتخاب کنید"></label>
+   <datalist id="pl">${S.parts.filter(x=>x.id!==p.id).map(x=>`<option value="${esc(x.name)}">`).join('')}</datalist><div class="chips" id="chips">${chipsHTML()}</div>
+   <div class="row g end">${isNew?'':`<button type="button" class="btn ghost danger" data-act="delpart" data-id="${p.id}">حذف</button>`}<button type="button" class="btn ghost" data-act="close">انصراف</button><button class="btn">ذخیره</button></div></form>`);
+}
+const chipsHTML=()=>U.alts.map(id=>{const x=partById(id);return x?`<span class="chip">${esc(x.name)}<button type="button" data-act="rmalt" data-id="${id}" aria-label="حذف">✕</button></span>`:''}).join('');
+function catModal(c,parent){
+  openModal(`<form id="cf" data-id="${c?c.id:''}"><h3>${c?'ویرایش دسته':'دسته‌ی جدید'}</h3>
+   <label>نام<input class="in" name="name" required value="${esc(c?c.name:'')}" placeholder="مثلاً پژو ۴۰۵ / قطعات موتوری"></label>
+   <label style="margin-top:10px">آیکون<div class="icons">${ICONS.map(i=>`<label class="ic"><input type="radio" name="icon" value="${i}" ${(c?c.icon:'📁')===i?'checked':''}><span>${i}</span></label>`).join('')}</div></label>
+   <label style="margin-top:10px">زیرمجموعه‌ی<select class="in" name="parent"><option value="">— سطح اول —</option>${catOpts(c?c.parent:parent,c&&c.id)}</select></label>
+   <div class="row g end"><button type="button" class="btn ghost" data-act="close">انصراف</button><button class="btn">ذخیره</button></div></form>`);
+}
+function mechModal(m){
+  openModal(`<form id="mf" data-id="${m?m.id:''}"><h3>${m?'ویرایش مکانیک':'مکانیک جدید'}</h3><label>نام<input class="in" name="name" required value="${esc(m?m.name:'')}"></label><label style="margin-top:10px">تلفن<input class="in" name="phone" inputmode="tel" value="${esc(m?m.phone:'')}"></label>
+   <div class="row g end">${m?`<button type="button" class="btn ghost danger" data-act="delmech" data-id="${m.id}">حذف</button>`:''}<button type="button" class="btn ghost" data-act="close">انصراف</button><button class="btn">ذخیره</button></div></form>`);
+}
+function settingsModal(){
+  const s=S.settings;
+  openModal(`<form id="sf2"><h3>تنظیمات</h3><div class="fg">
+   <label class="span">نام فروشگاه (سربرگ فاکتور)<input class="in" name="shop" value="${esc(s.shop)}"></label>
+   <label>آدرس<input class="in" name="addr" value="${esc(s.addr)}"></label><label>تلفن<input class="in" name="phone" value="${esc(s.phone)}"></label>
+   <label class="span"><span><input type="checkbox" name="sound" ${s.sound?'checked':''}> صدای افکت‌ها</span></label>
+   <label>آدرس سرور همگام‌سازی (اختیاری)<input class="in" name="syncUrl" dir="ltr" value="${esc(s.syncUrl)}" placeholder="http://192.168.1.10:3000"></label><label>رمز سرور<input class="in" name="token" dir="ltr" value="${esc(s.token)}"></label></div>
+   <div class="row g wrap" style="margin-top:14px"><button type="button" class="btn ghost" data-act="export">خروجی پشتیبان</button><button type="button" class="btn ghost" data-act="import">بازیابی پشتیبان</button><button type="button" class="btn ghost danger" data-act="wipe">پاک‌کردن همه‌ی داده‌ها</button></div>
+   <input type="file" id="imp" accept=".json,application/json" data-in="imp" hidden>
+   <div class="row g end"><button type="button" class="btn ghost" data-act="close">بستن</button><button class="btn">ذخیره</button></div></form>`);
+}
+
+
+/* ---------- ابزار انبار: ورود اکسل/CSV و تغییر قیمت گروهی ---------- */
+function snapBulk(){S.bulkUndo={at:Date.now(),parts:JSON.parse(JSON.stringify(S.parts)),cats:JSON.parse(JSON.stringify(S.cats))}}
+function parseTable(text){
+  text=text.replace(/^\uFEFF/,'');const first=text.split(/\r?\n/)[0]||'';
+  const del=first.includes('\t')?'\t':(first.split(';').length>first.split(',').length?';':',');
+  const rows=[];let row=[],cur='',q=false;
+  for(let i=0;i<text.length;i++){const c=text[i];
+    if(q){if(c==='"'){if(text[i+1]==='"'){cur+='"';i++}else q=false}else cur+=c}
+    else if(c==='"')q=true;
+    else if(c===del){row.push(cur);cur=''}
+    else if(c==='\n'||c==='\r'){if(c==='\r'&&text[i+1]==='\n')i++;row.push(cur);cur='';if(row.some(x=>x.trim()))rows.push(row);row=[]}
+    else cur+=c}
+  row.push(cur);if(row.some(x=>x.trim()))rows.push(row);return rows;
+}
+const COLS={name:['نام','نام قطعه','نام کالا','شرح','name'],code:['کد','کد فنی','code'],barcode:['بارکد','barcode'],branch:['شاخه','خودرو','ماشین','برند','branch','car'],sub:['زیرشاخه','گروه','دسته','دسته بندی','sub','group'],buy:['خرید','قیمت خرید','buy'],sell:['فروش','قیمت فروش','قیمت','sell','price'],stock:['موجودی','تعداد','stock','qty'],min:['حداقل','حد هشدار','min']};
+function mapCols(hdr){const m={};hdr.forEach((h,i)=>{const n=norm(h).replace(/[\u200c_-]/g,' ').trim();for(const k in COLS)if(m[k]===undefined&&COLS[k].some(a=>norm(a)===n))m[k]=i});return m}
+function planImport(rows,toman){
+  let m=mapCols(rows[0]),data=rows.slice(1);
+  if(m.name===undefined){m={name:0,code:1,branch:2,sub:3,buy:4,sell:5,stock:6};data=rows}
+  const mul=toman?10:1,out={skip:0,items:[]};
+  data.forEach(r=>{const g=k=>m[k]===undefined?'':String(r[m[k]]==null?'':r[m[k]]).trim();const name=g('name');if(!name){out.skip++;return}
+    out.items.push({name,code:g('code'),barcode:norm(g('barcode')).replace(/\s/g,''),branch:g('branch'),sub:g('sub'),buy:num(g('buy'))*mul,sell:num(g('sell'))*mul,stock:g('stock')===''?null:num(g('stock')),min:g('min')===''?null:num(g('min'))})});
+  return out;
+}
+const topName=id=>{let c=catById(id),t='';while(c){t=norm(c.name);c=catById(c.parent)}return t};
+function addIdx(ix,p){const b=topName(p.cat);if(p.barcode)ix.bc.set(p.barcode,p);if(p.code)ix.cd.set(norm(p.code)+'|'+b,p);ix.nm.set(norm(p.name)+'|'+b,p)}
+function buildIdx(){const ix={bc:new Map(),cd:new Map(),nm:new Map()};S.parts.forEach(p=>addIdx(ix,p));return ix}
+function matchIdx(ix,o){const b=norm(o.branch);return (o.barcode&&ix.bc.get(o.barcode))||(o.code&&ix.cd.get(norm(o.code)+'|'+b))||ix.nm.get(norm(o.name)+'|'+b)||null}
+function startImport(txt,inputEl){
+  const toman=!!($('#toman')&&$('#toman').checked);const rows=parseTable(txt||'');if(inputEl)inputEl.value='';
+  if(!rows.length)return toast('متنی پیدا نشد',1);
+  U.imp=planImport(rows,toman);if(!U.imp.items.length)return toast('ردیفی پیدا نشد؛ عنوان ستون‌ها را چک کن',1);
+  const ix=buildIdx();let add=0,upd=0;U.imp.items.forEach(o=>matchIdx(ix,o)?upd++:add++);
+  openModal(`<h3>بررسی قبل از ورود</h3><div class="stats"><div class="card st pr"><b>${fa(add)}</b><span>قطعه‌ی جدید</span></div><div class="card st"><b>${fa(upd)}</b><span>بروزرسانی موجود</span></div><div class="card st rd"><b>${fa(U.imp.skip)}</b><span>ردیف بدون نام (ردشده)</span></div></div>
+   ${U.imp.items.slice(0,4).map(o=>`<div class="lr"><div class="m"><b>${esc(o.name)}</b><small>${esc(o.branch)}${o.sub?' › '+esc(o.sub):''} · فروش ${fa(o.sell)} ریال · موجودی ${o.stock===null?'—':fa(o.stock)}</small></div></div>`).join('')}
+   <div class="hint">قیمت‌ها${toman?' (تومان ×۱۰)':''} به ریال وارد می‌شن. قبل از ورود نسخه‌ی فعلی ذخیره می‌شه و از «ابزار انبار» قابل برگشته.</div>
+   <div class="row g end"><button class="btn ghost" data-act="close">انصراف</button><button class="btn" data-act="impgo">ورود ${fa(U.imp.items.length)} ردیف</button></div>`);
+}
+function applyImport(){
+  const pl=U.imp;if(!pl)return;snapBulk();const ix=buildIdx();let add=0,upd=0;
+  const ensureCat=(branch,sub)=>{if(!branch)return '';let b=S.cats.find(c=>!c.parent&&norm(c.name)===norm(branch));if(!b){b={id:uid(),name:branch,icon:'🚗',parent:''};S.cats.push(b)}let id=b.id;
+    String(sub||'').split(/[>›\/]/).map(s=>s.trim()).filter(Boolean).forEach(nm=>{let c=S.cats.find(x=>x.parent===id&&norm(x.name)===norm(nm));if(!c){c={id:uid(),name:nm,icon:'📁',parent:id};S.cats.push(c)}id=c.id});return id};
+  pl.items.forEach(o=>{const cat=ensureCat(o.branch,o.sub),p=matchIdx(ix,o);
+    if(p){if(o.buy)p.buy=o.buy;if(o.sell)p.sell=o.sell;if(o.stock!==null)p.stock=o.stock;if(o.min!==null)p.min=o.min;if(o.code)p.code=o.code;if(o.barcode)p.barcode=o.barcode;if(cat&&!p.cat)p.cat=cat;upd++}
+    else{const n={id:uid(),name:o.name,code:o.code,barcode:o.barcode,car:o.branch,cat,buy:o.buy,sell:o.sell,stock:o.stock===null?0:o.stock,min:o.min===null?2:o.min,alts:[]};S.parts.push(n);addIdx(ix,n);add++}});
+  U.imp=null;save();closeModal();render();sfx.done();toast(fa(add)+' جدید، '+fa(upd)+' بروزرسانی');
+}
+function bulkModal(){
+  const tops=S.cats.filter(c=>!c.parent);
+  openModal(`<h3>ابزار انبار</h3>
+  <div class="card" style="padding:14px;margin-bottom:12px"><b>ورود گروهی قطعات (اکسل / CSV)</b>
+   <div class="hint">ستون‌ها: نام، کد، بارکد، شاخه، زیرشاخه، خرید، فروش، موجودی، حداقل. ردیف اول عنوان ستون‌هاست. زیرشاخه‌ی تودرتو را با علامت &gt; بنویس (موتوری&gt;سرسیلندر). اکسل را با Save as CSV UTF-8 ذخیره کن.</div>
+   <div class="row g wrap" style="margin-top:10px"><button type="button" class="btn ghost" data-act="tpl">دانلود نمونه فایل</button><button type="button" class="btn" data-act="impfile">انتخاب فایل CSV</button></div>
+   <input type="file" id="cf2" accept=".csv,.txt,.tsv,text/csv,text/plain" data-in="impf" hidden>
+   <textarea class="in" id="paste" rows="3" placeholder="یا ردیف‌ها را از اکسل کپی کن و اینجا بچسبان" style="margin-top:10px"></textarea>
+   <button type="button" class="btn ghost" data-act="imppaste" style="margin-top:8px">بررسی متن چسبانده‌شده</button>
+   <label style="margin-top:10px"><span><input type="checkbox" id="toman"> قیمت‌های فایل به تومان است (×۱۰ می‌شود)</span></label></div>
+  <form id="bp" class="card fg" style="padding:14px"><b class="span">تغییر قیمت گروهی</b>
+   <label>محدوده<select class="in" name="scope"><option value="">همه‌ی قطعات</option>${tops.map(c=>`<option value="${c.id}">${esc(c.name)}</option>`).join('')}</select></label>
+   <label>روش<select class="in" name="mode"><option value="percent">افزایش/کاهش درصدی</option><option value="margin">فروش = خرید + درصد سود</option></select></label>
+   <label>کدام قیمت (روش درصدی)<select class="in" name="field"><option value="sell">فروش</option><option value="buy">خرید</option><option value="both">هر دو</option></select></label>
+   <label>درصد (مثلاً ۱۰ یا ‎-۵)<input class="in" name="pct" inputmode="decimal" required></label>
+   <label class="span">گرد کردن<select class="in" name="rnd"><option value="0">بدون گرد کردن</option><option value="10000">۱۰ هزار ریال</option><option value="100000" selected>۱۰۰ هزار ریال</option><option value="1000000">۱ میلیون ریال</option></select></label>
+   <button class="btn span">اعمال</button></form>
+  ${S.bulkUndo?`<div class="row g end" style="justify-content:space-between"><small>آخرین نسخه‌ی ذخیره‌شده: ${jdate(S.bulkUndo.at,{dateStyle:'short',timeStyle:'short'})}</small><button type="button" class="btn ghost danger" data-act="undobulk">برگرداندن آخرین ورود/تغییر</button></div>`:''}
+  <div class="row end"><button type="button" class="btn ghost" data-act="close">بستن</button></div>`);
+}
+
+/* ---------- رویدادها ---------- */
+async function saveFile(name,type,content){
+  const f=new File([content],name,{type});
+  try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:name});return true}}catch(e){if(e&&e.name==='AbortError')return false}
+  const a=document.createElement('a');a.href=URL.createObjectURL(f);a.download=name;a.click();return true;
+}
+const A={
+  tab:d=>go(d.t),
+  close:()=>closeModal(),
+  add:d=>{addToCart(d.id);const q=$('#q');q.value='';renderSR();if(innerWidth>900)q.focus()},
+  del:d=>{S.draft.items.splice(+d.i,1);save();render()},
+  clearcart:()=>{const d=S.draft;if(d.items.length&&!confirm('فاکتور جاری پاک شود و فروش جدید شروع شود؟'))return;S.draft={items:[],mech:'',buyer:'',kind:'walk',method:'cash',discount:0};U.man=false;save();render()},
+  kind:d=>{S.draft.kind=d.v;S.draft.method=d.v==='mech'?'credit':(S.draft.method==='credit'?'cash':S.draft.method);save();render()},
+  inc:d=>{S.draft.items[+d.i].qty++;save();render()},
+  dec:d=>{const it=S.draft.items[+d.i];it.qty=Math.max(1,it.qty-1);save();render()},
+  pickname:d=>{const p=partById(d.id),f=$('#mi');if(!p||!f)return;f.elements['name'].value=p.name;f.elements['price'].value=fmt(p.sell);$('#isug').innerHTML='';f.elements['qty'].focus();f.elements['qty'].select()},
+  bulk:()=>bulkModal(),
+  tpl:()=>saveFile('parts-template.csv','text/csv','\uFEFFنام,کد,بارکد,شاخه,زیرشاخه,خرید,فروش,موجودی,حداقل\nواشر سرسیلندر,GK-405,6260001000011,پژو,موتوری>سرسیلندر,4200000,5600000,6,3\nفیلتر روغن,OF-PR,,پراید,فیلتر و روغن,450000,750000,25,10\n'),
+  ihx:()=>{const d=$('.ih');if(d)d.remove();try{localStorage.setItem('ih','1')}catch{}},
+  impfile:()=>$('#cf2').click(),
+  imppaste:()=>startImport($('#paste').value),
+  impgo:()=>applyImport(),
+  undobulk:()=>{if(!S.bulkUndo)return;if(!confirm('قطعات و دسته‌ها به قبل از آخرین ورود/تغییر گروهی برگردد؟ تغییر موجودی بعد از آن (مثلاً فروش‌ها) از این بخش برمی‌گردد به حالت قبل.'))return;S.parts=S.bulkUndo.parts;S.cats=S.bulkUndo.cats;delete S.bulkUndo;save();closeModal();render();toast('برگردانده شد')},
+  zeros:(d,b)=>{const i=b.previousElementSibling;const v=norm(i.value).replace(/\D/g,'');if(!v)return;i.value=fmt(v+'000');i.focus();i.dispatchEvent(new Event('change',{bubbles:true}))},
+  focusq:()=>{scrollTo(0,0);$('#q').focus()},
+  newmechsale:()=>{U.fromSale=true;mechModal(null)},
+  method:d=>{S.draft.method=d.v;save();render()},
+  finalize:()=>finalize(),
+  scan:()=>scan(),
+  settings:()=>settingsModal(),
+  selcat:d=>{S.ui.cat=d.id;save();render()},
+  addcat:()=>catModal(null,S.ui.cat),
+  editcat:()=>{const c=catById(S.ui.cat);c?catModal(c):toast('ابتدا یک دسته را انتخاب کنید',1)},
+  delcat:()=>{const c=catById(S.ui.cat);if(!c)return toast('ابتدا یک دسته را انتخاب کنید',1);
+    if(S.cats.some(x=>x.parent===c.id)||S.parts.some(p=>p.cat===c.id))return toast('این دسته زیرشاخه یا قطعه دارد؛ ابتدا آن‌ها را منتقل کنید',1);
+    if(confirm('دسته‌ی «'+c.name+'» حذف شود؟')){S.cats=S.cats.filter(x=>x.id!==c.id);S.ui.cat=c.parent;save();render()}},
+  newpart:d=>{$('#sr').hidden=true;partModal(null,d.name)},
+  editpart:d=>partModal(partById(d.id)),
+  rmalt:d=>{U.alts=U.alts.filter(i=>i!==d.id);$('#chips').innerHTML=chipsHTML()},
+  delpart:d=>{if(confirm('این قطعه حذف شود؟')){S.parts=S.parts.filter(p=>p.id!==d.id);S.parts.forEach(p=>p.alts=p.alts.filter(i=>i!==d.id));save();closeModal();render()}},
+  newmech:()=>mechModal(null),
+  mech:d=>showMech(d.id),
+  editmech:d=>mechModal(mechById(d.id)),
+  delmech:d=>{if(bal(d.id)!==0)return toast('این مکانیک هنوز مانده‌حساب دارد',1);if(confirm('حذف شود؟')){S.mechs=S.mechs.filter(m=>m.id!==d.id);save();closeModal();render()}},
+  inv:d=>showInv(d.id),
+  printinv:d=>{const i=S.invoices.find(x=>x.id===d.id);$('#printroot').innerHTML=invHTML(i);print()},
+  shareinv:async d=>{const i=S.invoices.find(x=>x.id===d.id);
+    const t=`${S.settings.shop}\nفاکتور ${fa(i.no)} — ${jdate(i.date)}\n`+i.items.map(x=>`• ${x.name} × ${fa(x.qty)} = ${fa(x.qty*x.price)}`).join('\n')+`\nجمع قابل پرداخت: ${fa(i.total)} ریال`;
+    try{if(navigator.share)await navigator.share({title:'فاکتور '+fa(i.no),text:t});else{await navigator.clipboard.writeText(t);toast('متن فاکتور کپی شد')}}catch{}},
+  voidinv:d=>{const i=S.invoices.find(x=>x.id===d.id);if(!confirm('فاکتور باطل و موجودی برگردانده شود؟'))return;i.void=true;i.items.forEach(x=>{const p=partById(x.pid);if(p)p.stock+=x.qty});save();closeModal();render();toast('فاکتور باطل شد')},
+  applycount:()=>{let n=0;Object.entries(U.counts).forEach(([id,v])=>{const p=partById(id);if(p&&v!==undefined&&v!==p.stock){S.audits.push({t:Date.now(),pid:id,from:p.stock,to:v});p.stock=v;n++}});
+    if(!n)return toast('مغایرتی برای اعمال نیست',1);U.counts={};save();sfx.done();render();toast(fa(n)+' قطعه اصلاح شد')},
+  export:async()=>{const ok=await saveFile('irankhodro-backup-'+new Date().toISOString().slice(0,10)+'.json','application/json',JSON.stringify(S));if(ok){S.lastBackup=Date.now();save();toast('پشتیبان آماده شد')}},
+  import:()=>$('#imp').click(),
+  wipe:()=>{if(confirm('همه‌ی قطعات، فاکتورها و مکانیک‌ها پاک شود؟ این کار برگشت‌پذیر نیست.')){const k=S.settings;S=DEF();S.settings=k;save();closeModal();render()}}
+};
+const I={ // change
+  qty:t=>{S.draft.items[+t.dataset.i].qty=Math.max(1,Math.round(num(t.value))||1);save();render()},
+  price:t=>{S.draft.items[+t.dataset.i].price=num(t.value);save();render()},
+  draft:t=>{const k=t.dataset.k;S.draft[k]=k==='discount'?num(t.value):t.value;save();if(k==='discount')render()},
+  impf:async t=>{const f=t.files[0];if(!f)return;const buf=await f.arrayBuffer();let txt;try{txt=new TextDecoder('utf-8',{fatal:true}).decode(buf)}catch{txt=new TextDecoder('windows-1256').decode(buf)}startImport(txt,t)},
+  imp:async t=>{try{const s=JSON.parse(await t.files[0].text());if(!Array.isArray(s.parts))throw 0;S=hydrate(s);save();closeModal();render();toast('پشتیبان بازیابی شد')}catch{toast('فایل پشتیبان معتبر نیست',1)}}
+};
+const IP={ // input
+  pf:t=>{S.ui.pf=t.value;$('#plist').innerHTML=plist()},
+  if:t=>{U.iff=t.value;$('#ilist').innerHTML=invRows()},
+  sf:t=>{U.sf=t.value;$('#stlist').innerHTML=stRows()},
+  count:t=>{const id=t.dataset.id,p=partById(id);U.counts[id]=t.value.trim()===''?undefined:num(t.value);const c=U.counts[id],d=$('#d-'+id);
+    if(d){const df=c===undefined?'':c-p.stock;d.className='dd '+(df>0?'pos':df<0?'neg':'');d.textContent=df===''?'':(df>0?'+':'')+fa(df)}$('#cn').textContent=fa(cntDiff())},
+  iname:t=>{const box=$('#isug');if(!box)return;const r=t.value.trim()?findParts(t.value).slice(0,6):[];
+    box.innerHTML=r.map(p=>`<div class="sri" data-act="pickname" data-id="${p.id}"><div><b>${esc(p.name)}</b><small>${esc(catPath(p.cat))}</small></div><div class="r"><span class="tag ${sc(p)}">${p.stock<=0?'ناموجود':fa(p.stock)}</span><b>${fa(p.sell)}</b></div></div>`).join('')},
+  altin:t=>{const p=S.parts.find(x=>norm(x.name)===norm(t.value));if(p&&!U.alts.includes(p.id)){U.alts.push(p.id);t.value='';$('#chips').innerHTML=chipsHTML()}}
+};
+const H={ // submit
+  pf:f=>{const d=Object.fromEntries(new FormData(f)),id=f.dataset.id;
+    const o={name:d.name.trim(),code:d.code.trim(),barcode:norm(d.barcode).replace(/\s/g,''),car:d.car.trim(),cat:d.cat,buy:num(d.buy),sell:num(d.sell),stock:num(d.stock),min:num(d.min)};
+    if(o.barcode&&S.parts.some(x=>x.barcode===o.barcode&&x.id!==id))return toast('این بارکد برای قطعه‌ی دیگری ثبت شده',1);
+    let p=id&&partById(id);if(p)Object.assign(p,o);else{p={id:uid(),alts:[],...o};S.parts.push(p)}
+    setAlts(p,U.alts);save();closeModal();render();toast('ذخیره شد')},
+  cf:f=>{const d=Object.fromEntries(new FormData(f)),id=f.dataset.id;const c=id&&catById(id);
+    if(c){c.name=d.name.trim();c.icon=d.icon;c.parent=d.parent}else S.cats.push({id:uid(),name:d.name.trim(),icon:d.icon,parent:d.parent});
+    save();closeModal();render()},
+  mf:f=>{const d=Object.fromEntries(new FormData(f)),id=f.dataset.id;const m=id&&mechById(id);
+    if(m){m.name=d.name.trim();m.phone=d.phone.trim()}else{S.mechs.push({id:uid(),name:d.name.trim(),phone:d.phone.trim()});if(U.fromSale)S.draft.mech=d.name.trim()}
+    U.fromSale=false;save();closeModal();render()},
+  mi:f=>{const d=Object.fromEntries(new FormData(f));const name=d.name.trim();if(!name)return;
+    const p=S.parts.find(x=>norm(x.name)===norm(name));const qty=Math.max(1,Math.round(num(d.qty))||1);let price=num(d.price);if(!price&&p)price=p.sell;
+    if(price<=0)return toast('قیمت را وارد کن',1);
+    if(p){const it=S.draft.items.find(x=>x.pid===p.id&&x.price===price);if(it)it.qty+=qty;else S.draft.items.push({pid:p.id,name:p.name,qty,price,buy:p.buy});
+      const cur=S.draft.items.filter(x=>x.pid===p.id).reduce((s,x)=>s+x.qty,0);if(cur>p.stock){toast('موجودی کافی نیست ('+fa(p.stock)+' عدد)',1);sfx.err()}else sfx.add()}
+    else{S.draft.items.push({pid:'',name,qty,price,buy:0});sfx.add()}
+    save();render();setTimeout(()=>{const n=$('#mi [name=name]');if(n)n.focus()},0)},
+  pay:f=>{const d=Object.fromEntries(new FormData(f)),amt=num(d.amount);if(amt<=0)return toast('مبلغ معتبر وارد کنید',1);
+    S.payments.push({id:uid(),mech:f.dataset.id,amount:amt,note:d.note.trim(),date:Date.now()});save();sfx.done();render();showMech(f.dataset.id);toast('تسویه ثبت شد')},
+  bp:f=>{const d=Object.fromEntries(new FormData(f));const pct=parseFloat(norm(d.pct).replace(',','.'))||0;if(!pct)return toast('درصد را وارد کن',1);
+    const ids=d.scope?[d.scope,...desc(d.scope)]:null,rnd=+d.rnd||0,R=v=>rnd?Math.round(v/rnd)*rnd:Math.round(v);
+    const list=S.parts.filter(p=>!ids||ids.includes(p.cat));if(!list.length)return toast('قطعه‌ای در این محدوده نیست',1);
+    if(!confirm('قیمت '+fa(list.length)+' قطعه تغییر کند؟'))return;
+    snapBulk();list.forEach(p=>{if(d.mode==='margin'){if(p.buy>0)p.sell=R(p.buy*(1+pct/100))}else{if(d.field!=='buy')p.sell=R(p.sell*(1+pct/100));if(d.field!=='sell')p.buy=R(p.buy*(1+pct/100))}});
+    save();closeModal();render();toast('قیمت '+fa(list.length)+' قطعه تغییر کرد')},
+  sf2:f=>{const d=Object.fromEntries(new FormData(f));Object.assign(S.settings,{shop:d.shop.trim()||'داروخانه ایرانخودرو',addr:d.addr.trim(),phone:d.phone.trim(),sound:!!d.sound,syncUrl:d.syncUrl.trim(),token:d.token.trim()});
+    save();closeModal();render();pull()}
+};
+document.addEventListener('click',e=>{
+  if(!e.target.closest('.sw'))$('#sr').hidden=true;
+  const b=e.target.closest('[data-act]');if(!b)return;
+  if(b.tagName==='A')e.preventDefault();
+  const fn=A[b.dataset.act];if(fn)fn(b.dataset,b,e);
+});
+document.addEventListener('change',e=>{const k=e.target.dataset&&e.target.dataset.in;if(k&&I[k])I[k](e.target)});
+document.addEventListener('input',e=>{const t=e.target;
+  if(t.classList&&t.classList.contains('money')){const v=norm(t.value).replace(/\D/g,'');t.value=v?fmt(v):''}
+  const k=t.dataset&&t.dataset.inp;if(k&&IP[k])IP[k](t)});
+document.addEventListener('toggle',e=>{if(e.target.classList&&e.target.classList.contains('man'))U.man=e.target.open},true);
+document.addEventListener('submit',e=>{e.preventDefault();const h=H[e.target.id];if(h)h(e.target)});
+document.addEventListener('keydown',e=>{
+  const tg=e.target,typing=/INPUT|TEXTAREA|SELECT/.test(tg.tagName);
+  if(e.key==='F2'||(e.key==='/'&&!typing)){e.preventDefault();closeModal();const q=$('#q');q.focus();q.select();return}
+  if(e.key==='F9'){e.preventDefault();if(S.ui.tab==='sale'&&!$('#mod'))finalize();return}
+  if(e.key==='Escape'){if($('#mod'))closeModal();else{const q=$('#q');q.value='';renderSR();q.blur()}return}
+  if(e.altKey&&/^Digit[1-6]$/.test(e.code)){e.preventDefault();closeModal();go(TABS[+e.code.slice(5)-1].id);return}
+  if(e.key==='Enter'&&tg.name==='name'&&tg.form&&tg.form.id==='mi'){const f=tg.form;if(!S.parts.some(x=>norm(x.name)===norm(tg.value))&&!num(f.elements['price'].value)){const fs=$('#isug .sri');if(fs){e.preventDefault();A.pickname(fs.dataset)}}}
+  if(e.key==='Enter'&&tg.id==='bc')e.preventDefault(); // بارکدخوان نباید فرم را ثبت کند
+  if(e.key==='Enter'&&tg.classList&&tg.classList.contains('n')&&tg.dataset.in){tg.blur();$('#q').focus()}
+});
+
+/* ---------- شروع ---------- */
+(async function boot(){
+  let s=null;try{s=await DB.get('state')}catch{}
+  S=s?hydrate(s):DEF();
+  if(!s){seed();S.updatedAt=Date.now();try{await DB.set('state',S)}catch{}}
+  else if((S.v||1)<2){if(isDemo()){S.cats=[];S.parts=[];S.mechs=S.mechs.filter(m=>m.id!=='m1')}ensureBranches();S.v=2;save()}
+  render();pull();
+  try{navigator.storage&&navigator.storage.persist&&navigator.storage.persist()}catch{}
+  const standalone=navigator.standalone||matchMedia('(display-mode: standalone)').matches;
+  let seen=false;try{seen=!!localStorage.getItem('ih')}catch{}
+  if(!standalone&&/iphone|ipad|ipod/i.test(navigator.userAgent)&&location.protocol!=='file:'&&!seen){const d=document.createElement('div');d.className='card ih';d.innerHTML='<span>📲 نصب مثل برنامه: دکمه <b>Share</b> (مربع با فلش) ← <b>Add to Home Screen</b></span><button class="mini" data-act="ihx" aria-label="بستن">✕</button>';$('#view').before(d)}
+  if(S.parts.length&&(!S.lastBackup||Date.now()-S.lastBackup>7*864e5))setTimeout(()=>toast('یادآوری: از ⚙️ تنظیمات پشتیبان بگیر'),3000);
+  if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+})();
+</script>
+</body>
+</html>
